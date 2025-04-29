@@ -1,2 +1,3 @@
-web: gunicorn school.wsgi:application
+web: gunicorn myschool.wsgi:application
+
 
