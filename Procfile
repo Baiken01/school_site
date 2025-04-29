@@ -1,3 +1,4 @@
-web: gunicorn myschool.wsgi:application
+gunicorn myschool.wsgi:application
+
 
 
