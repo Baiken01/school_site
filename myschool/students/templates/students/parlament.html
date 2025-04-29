@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <meta name="viewport" content="width=1200">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Чүй облусттук мектеп-гимназиясы</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+
+<body style="background-image: url('{% static "images/bg6.jpeg" %}')">
+    <script src="{% static 'js/script.js' %}"></script>
+                                                                <!--all menu for website-->
+
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-list">
+                <li class="home"><a href="/">Башкы бет</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Мектеп-гимназия жөнүндө</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Флаг, Герб, Гимн</a></li>
+                        <li><a href="{% url 'about' %}">Мектеп-гимназиянын тарыхы</a></li>
+                        <li><a href="{% url 'struktura' %}">Мектеп-гимназиянын структурасы</a></li>
+                        <li><a href="{% url 'success' %}">Мектеп-гимназиянын жетишкендиктери</a></li>
+                        <li><a href="{% url 'knowledge' %}">Билим берүү ишмердүлүгү</a></li>
+                        <li><a href="/teachers/">Мектеп-гимназиянын мугалимдери</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Окуу-тарбия процесси</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'parlament' %}">Окуучулардын ѳзүн-ѳзү башкаруу уюму</a></li>
+                        <li><a href="{% url 'courses' %}">Ийримдер, атайын курстар</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Маалыматтар</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/#news">Жаңылыктар</a></li>
+                        <li><a href="{% url 'dekada' %}">Декадалар</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'gallery' %}">Галерея</a></li>
+                <li><a href="#bottom">Байланыш</a></li>
+            </ul>
+        </div>
+    </nav>
+
+                                                                <!--HEADER SCHOOL STATUS-->
+
+<section id="header">
+    <div class="head">
+        <div class="container">
+            <div class="logo-school">
+                <a href="index.html"><img src="{% static 'images/logo2.jpg' %}" alt="logo" class="logo"></a>
+                <div id="sitename">
+                    <br>
+                    Чүй облусттук мектеп-гимназиясы
+                </div>
+            </div>
+            <div class="el-book">
+                <a href="#">
+                    <a href="https://kitep.edu.gov.kg/kg" target="_blank" class="knopka" style="font-size: 12px; text-decoration: none;">
+                        <i class="knopka-el" aria-hidden="true"></i> Электрондук окуу китептери
+                    </a>
+
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div id="content-about">
+  <h2 class="content-title">Окуучулардын өзүн-өзү башкаруу уюмунун Жобосу</h2> <!-- Негизги тема -->
+  <div class="inner-content">
+    <section1>
+        <h1>Окуучулардын өзүн-өзү башкаруу уюмунун Жобосу</h1>
+
+        <div class="section">
+          <h2>1. Жалпы жоболор</h2>
+          <p>“Манас”,”Семетей”,Сейтек”-жаштардын,өспүрүмдөрдүн өз ыктыяры, каалоолору менен көп улуттуу коомдук кошуундары болуп эсептелет.</p>
+        </div>
+
+        <div class="section">
+          <h2>2. Максаты жана милдеттери</h2>
+          <p>Кошуундардын негизги максаты-жаштарды, өспүрүмдөрү (уландар менен кыздары) жалпы адамзаттык дөөлөттөрдүн, дүйнөлүк баалулуктарды Мекен, Эл, жер алдында милдеттүүлүктүн,ата-эне ,улууларды урматтоо сезимдерден ,табият менен туура мамиледе , ар бир адамдын руханий өнүгүшүнүн зарылдыгын туура түшүнтүү менен кабылдоого тарбиялоо .</p>
+          <h4>Балдардын жана өспүрүмдөрдүн уюмунун функциясы</h4>
+          <h4>А) Идеялык–тарбиялык функция</h4>
+          <p>Идеялык-тарбиялык функция өздөрүнүн нарк-кесип нукура элдик нарк -дөөлөтөр менен байытуу ,өркүндөтүү “Манас “ эпосун тереңдетип окуп-билүү менен жалпы адамзатка тиешелүү түшүнүктөрдү, асыл сапаттарды өздөрүнө калыптандыруу, өркүндөтүү .</p>
+          <h4>Б)Үйрөтүүчүлүк жана өркүндөтүүчүлүк функциясы</h4>
+          <p>Үйрөтүүчүлүк жана өркүндөтүүлүк .Кошуундарга мүчө болгон ар бир окуучу өз чыгармачылыгын ар тараптан өнүктүрүп ,өзү кызыккан иштер боюнча эркин окуп, өз алдынча өркүндөтүү.</p>
+          <h4>В)Уюштуруучулук жана өзүн-өзү башкаруучулук  функциясы</h4>
+          <p>Уюштуруучулук жана өзүн-өзү башкаруучулук функция кошуундун мүчөлөрү этнопедагогиканын өрнөк, түшүндүрүү, ынандыруу, ишеним сыяктуу жакшы усулдарын жетекчиликке алуу, өз ара тажрыйба алмашуучулук менен иш алып баруу, чын дилден айтылган сынды уга билүү, өзгөчө таланттуу балдарды билүү, өзгөчө таланттуу балдардын көргөзмөлөрүн  уюштуруу.</p>
+          <h4>Г)Диагностикалык функция</h4>
+          <p> Диагностика мониторинг менен чыгат. Мүчөлөр кошуундун бир баскычынан экинчи баскычына өтүп жатып өздөрүнүн жетишкендиктерин текшеришет.</p>
+        </div>
+
+        <div class="section">
+          <h2>3. Структурасы</h2>
+          <p>Өзүн-өзү башкаруу уюму төмөнкү түзүмдөн турат:</p>
+          <ul>
+            <li>Президент;</li>
+            <li>Вице-президент;</li>
+            <li>Комитет башчылары (тартип, маданият, маалымат ж.б.);</li>
+            <li>Класстардан шайланган өкүлдөр.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>4. Укуктары жана милдеттери</h2>
+          <p>Өзүн-өзү башкаруу мүчөлөрү төмөнкү укуктарга ээ:</p>
+          <ul>
+            <li>Мектеп администрациясы менен тыгыз кызматташуу;</li>
+            <li>Иш-чараларды сунуштоо жана уюштуруу;</li>
+            <li>Окуучулардын кызыкчылыктарын коргоо.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>5. Жобонун колдонуу мөөнөтү</h2>
+          <p>Бул Жобо мектеп директору тарабынан бекитилген күндөн тарта күчүнө кирет жана жаңы Жобо кабыл алынганга чейин колдонулат.</p>
+        </div>
+    </section1>
+  </div>
+</div>
+
+<!--FOOTER-->
+<section id="bottom">
+    <div class="container2">
+        <div class="foot-1">
+            <h3>Биздин дарегибиз</h3>
+            <div class="block map">
+                <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
+        <iframe src="https://yandex.com/map-widget/v1/?from=mapframe&ll=74.567939%2C42.723600&mode=whatshere&source=mapframe&um=constructor%3A80439b6dcc92765ebf867565a810b15e0c66602203984b0967eaacc9d16508b4&utm_source=mapframe&whatshere%5Bpoint%5D=74.567578%2C42.723517&whatshere%5Bzoom%5D=17&z=19.93"
+                frameborder="0" allowfullscreen="true" width="260px" height="150px" style="display: block;">
+        </iframe>
+    </div>
+        </div>
+        <div class="foot-1">
+            <h3>Меню</h3>
+            <div class="block menus">
+                <div><a href="/">Башкы бет</a></div>
+                <div><a href="/#news">Жанылыктар</a></div>
+                <div><a href="{% url 'gallery' %}">Сүрөт галереясы</a></div>
+                <div><a href="{% url 'about' %}">Мектеп-лицей жөнүндө</a></div>
+                <div><a href="#bottom">Байланыш</a></div>
+            </div>
+        </div>
+
+        <div class="foot-1">
+            <h3>Байланыш</h3>
+            <div class="block contacts">
+                <div class="info">
+                    <img src="{% static 'img/Room.svg' %}" alt="Адрес"> Бишкек шаары, Больничная көч., 17
+                </div>
+                <div class="info">
+                    <img src="{% static 'img/Vector.svg' %}" alt="Телефон"> +996 (312) 486383
+                </div>
+                <div class="info">
+                    <img src="{% static 'img/Vector.svg' %}" alt="Телефон"> +996 (312) 486267
+                </div>
+                <div class="info">
+                    <img src="{% static 'img/Vector.svg' %}" alt="Телефон"> +996 (312) 486267
+                </div>
+                <div class="info">
+                    <img src="{% static 'img/Vector (1).svg' %}" alt="Email"> school@email.ru
+                </div>
+                <div class="info">
+                    <img src="{% static 'img/Facebook F.svg' %}" alt="Facebook">
+                    <a href="https://www.facebook.com/61565092204360/" target="_blank">facebook.com/ncgkg</a>
+                </div>
+                <div class="info">
+                    <img src="{% static 'img/Telegram App.svg' %}" alt="Telegram">
+                    <a href="https://t.me/+xfJ8Eh8pAskyNzM6" target="_blank">telegram @ncgkg_news</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="copyright">
+    © 2025 Бардык укуктар корголгон. Сайт Allmir компаниясына таандык.
+</footer>
+
+</body>
+</html>

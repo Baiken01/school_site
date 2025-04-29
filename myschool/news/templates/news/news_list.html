@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <meta name="viewport" content="width=1200">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Чүй облусттук мектеп-гимназиясы</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+
+<body style="background-image: url('{% static "images/bg6.jpeg" %}')">
+    <script src="{% static 'js/script.js' %}"></script>
+                                                                <!--all menu for website-->
+
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-list">
+                <li class="home"><a href="/">Башкы бет</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Мектеп-гимназия жөнүндө</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Флаг, Герб, Гимн</a></li>
+                        <li><a href="about.html">Мектеп-гимназиянын тарыхы</a></li>
+                        <li><a href="struktura.html">Мектеп-гимназиянын структурасы</a></li>
+                        <li><a href="success.html">Мектеп-гимназиянын жетишкендиктери</a></li>
+                        <li><a href="knowledge.html">Билим берүү ишмердүлүгү</a></li>
+                        <li><a href="/teachers/">Мектеп-гимназиянын мугалимдери</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Окуу-тарбия процесси</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="parlament.html">Окуучулардын ѳзүн-ѳзү башкаруу уюму</a></li>
+                        <li><a href="courses.html">Ийримдер, атайын курстар</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Маалыматтар</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#news">Жаңылыктар</a></li>
+                        <li><a href="dekada.html">Декадалар</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="index.html#bottom">Байланыш</a></li>
+            </ul>
+        </div>
+    </nav>
+
+                                                                <!--HEADER SCHOOL STATUS-->
+
+<section id="header">
+    <div class="head">
+        <div class="container">
+            <div class="logo-school">
+                <a href="index.html"><img src="{% static 'images/logo2.jpg' %}" alt="logo" class="logo"></a>
+                <div id="sitename">
+                    <br>
+                    Чүй облусттук мектеп-гимназиясы
+                </div>
+            </div>
+            <div class="el-book">
+                <a href="#">
+                    <a href="https://kitep.edu.gov.kg/kg" target="_blank" class="knopka" style="font-size: 12px; text-decoration: none;">
+                        <i class="knopka-el" aria-hidden="true"></i> Электрондук окуу китептери
+                    </a>
+
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="news" id="news">
+    <div id="content-about">
+  <h2 class="content-title">Жаңылыктар</h2> <!-- Негизги тема -->
+  <div class="inner-content">
+      <!-- news_list.html -->
+<h2>Бардык жаңылыктар</h2>
+<div class="news-cards">
+    {% for item in all_news %}
+        <div class="news-card">
+            <img src="{{ item.image.url }}" alt="{{ item.title }}">
+            <div class="title">{{ item.title }}</div>
+            <div class="date">{{ item.date }}</div>
+            <div class="text">{{ item.content|truncatewords:15 }}...</div>
+            <button class="btn open-modal" data-id="{{ item.id }}">Толук окуу</button>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+            </div><div class="news-cards">
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+
+    </div>
+</div>
+
+  </div>
+</div>
+
+<!-- Модал терезе -->
+<div id="newsModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDate"></p>
+    <img id="modalImage" src="" alt="" style="max-width: 100%; border-radius: 10px;">
+    <p id="modalContent"></p>
+  </div>
+</div>
+
+</body>
+</html>
